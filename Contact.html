@@ -12,6 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;1,200&display=swap" rel="stylesheet">
+<script>
+    function openinfo(){
+        document.getElementById("Formboxid").style.display = "block";
+        document.getElementById("kasteid").style.display = "none";
+    }
+    function closeinfo(){
+        document.getElementById("Formboxid").style.display = "none";
+        document.getElementById("kasteid").style.display = "block";
+    }
+</script>
 </head>
 <body>
     <div class="topbar">
@@ -20,15 +30,19 @@
         <a href="https://github.com/CrixerLV">Projects</a>
         <a href="Contact.html" style="border-bottom: 1px solid black">Contact me</a>
     </div>
-      <div class="kaste">
-        <img src="img.jpeg">
+      <div id="kasteid" class="kaste">
         <h1>Raivo Nikolajenko</h1>
-        <h2>Information</h2>
+        <h2>You can find me here!</h2>
+        <button onClick="openinfo()">Contact Me</button>
+    </div>
+    <div id="Formboxid" class="Formbox">
+        <h1>Raivo Nikolajenko</h1>
         <i class="fa-brands fa-square-github"></i> <span>CrixerLv</span><br>
         <i class="fa-solid fa-square-phone"></i> <span>+37128646206</span><br>
         <i class="fa-solid fa-square-envelope"></i> <span>nikolajenkoraivo@gmail.com</span><br>
-        <h2>About Me</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <i class="fa-solid fa-square-envelope"></i> <span>Crixer#1241</span><br>
+        <i class="fa-solid fa-square-envelope"></i> <span>Rīga, Latvia</span><br>
+        <span onclick="closeinfo()" id="close">X</span>
     </div>
 </body>
 </html>
