@@ -1,2 +1,2 @@
 # Lai nokļūtu uz portfolio webpage, spied uz "Portfolio"
-[Portfolio](https://crixerlv.github.io/)
+Saite --> [Portfolio](https://crixerlv.github.io/)
