@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Home</title>
+    <title>Portfolio - About</title>
     <link rel="shortcut icon" href="FAV2.png" /> 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aboutstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;500&display=swap" rel="stylesheet">
+
+
+    <script>
+        function openinfo(){
+            document.getElementById("opencontact").style.display = "block";
+        }
+        function closeinfo(){
+            document.getElementById("opencontact").style.display = "none";
+        }
+    </script>
+
 </head>
 <body>
     <div class="top-bar">
         <a href="index.html">Raivo</a>
         <div class="top-bar-right">
-            <a id="openedpage" href="about.html">About</a>
+            <a  id="openedpage" href="about.html">About</a>
             <a href="skills.html">Skills</a>
             <a href="https://github.com/CrixerLV">Projects</a>
         </div>
@@ -26,11 +37,27 @@
         <div class="middle-bar-right">
             <img src="https://scontent.frix1-1.fna.fbcdn.net/v/t1.6435-9/81742836_3071064189786329_4231316499148570624_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=YP60HC1CL30AX90oH2Z&_nc_ht=scontent.frix1-1.fna&oh=00_AfBGJ7JDv0MEtse9OI28LfaXSr-Xf1IB8L2Ob2sVij0EfQ&oe=63A3F78A">
         </div>
-        <h1>Hello,</h1>
-        <h1>I'am Raivo</h1>
-        <h1>And I'am a</h1>
-        <h1>Junior-Web-Developer</h1>
-        <button>Contact me</button>
+        <h1>About</h1>
+        <p>Labdien!
+            <br>
+            Es esmu 18 gadus jauns džeks, kurš aizraujas ar programmēšanu.
+            Mācos es Rīgas Valsts tehnikumā par programmēšanas tehniķi 3. kursā, un varu teikt ,ka diezgan labi esmu apguvis šādas programmēšanas valodas:<a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, <a href="https://en.wikipedia.org/wiki/JavaScript">JS</a>, <a href="https://en.wikipedia.org/wiki/CSS">CSS</a>, <a href="https://en.wikipedia.org/wiki/C#">C#</a>, <a href="https://en.wikipedia.org/wiki/C++">C++</a>, <a href="https://en.wikipedia.org/wiki/lua">LUA</a>, mazliet <a href="https://en.wikipedia.org/wiki/php">PHP</a> un vēl citas valodas.
+            Ārpus programmēšanas pasaules ļoti patīk basketbols ,kā arī vizināties apkārt ar savu auto, esmu izbraukājis dažādas vietas jau, un varu to uzskaitīt ,kā savu otro hobiju ,pēc basketbola.
+        </p>
+        <button onclick="openinfo()">Contact me</button>
+    </div>
+    <div id="opencontact" class="black-popup">
+        <div class="contact-popup">
+            <h1>Contact me</h1>
+            <button onclick="closeinfo()" id="closebtn">X</button>
+            <form>
+            <input type="text" placeholder="Vārds" required><br>
+            <input type="text" placeholder="Uzvārds" required><br>
+            <input id="message" type="text" placeholder="Ziņojums" required><br>
+            <p>Max words: 100</p>
+            <input type="submit" value="Sūtīt">
+            </form>
+        </div>
     </div>
 </body>
 </html>
