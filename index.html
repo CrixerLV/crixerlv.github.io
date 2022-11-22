@@ -11,22 +11,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;500&display=swap" rel="stylesheet">
+
+
+    <script>
+        function openinfo(){
+            document.getElementById("opencontact").style.display = "block";
+        }
+        function closeinfo(){
+            document.getElementById("opencontact").style.display = "none";
+        }
+    </script>
+
 </head>
 <body>
-    <div class="topbar">
-        <img src="img.png">
-        <a style="border-bottom: 1px solid black" id="lefta">Home</a>
-        <a href="https://github.com/CrixerLV">Projects</a>
-        <a href="Contact.html">Contact me</a>
+    <div class="top-bar">
+        <a id="openedpage">Raivo</a>
+        <div class="top-bar-right">
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="https://github.com/CrixerLV">Projects</a>
+        </div>
     </div>
-      <div class="kaste">
-        <h1>Raivo Nikolajenko</h1>
-        <i class="fa-brands fa-square-github"></i> <span>CrixerLv</span><br>
-        <i class="fa-solid fa-square-phone"></i> <span>+37128646206</span><br>
-        <i class="fa-solid fa-square-envelope"></i> <span>nikolajenkoraivo@gmail.com</span><br>
-        <h2>About Me</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <div class="middle-bar">
+        <div class="middle-bar-right">
+            <img src="https://scontent.frix1-1.fna.fbcdn.net/v/t1.6435-9/81742836_3071064189786329_4231316499148570624_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=YP60HC1CL30AX90oH2Z&_nc_ht=scontent.frix1-1.fna&oh=00_AfBGJ7JDv0MEtse9OI28LfaXSr-Xf1IB8L2Ob2sVij0EfQ&oe=63A3F78A">
+        </div>
+        <h1>Hello,</h1>
+        <h1>I'am Raivo</h1>
+        <h1>And I'am a</h1>
+        <h1>Junior-Web-Developer</h1>
+        <button onclick="openinfo()">Contact me</button>
+    </div>
+    <div id="opencontact" class="black-popup">
+        <div class="contact-popup">
+            <h1>Contact me</h1>
+            <button onclick="closeinfo()" id="closebtn">X</button>
+            <form>
+            <input type="text" placeholder="Vārds" required><br>
+            <input type="text" placeholder="Uzvārds" required><br>
+            <input id="message" type="text" placeholder="Ziņojums" required><br>
+            <p>Max words: 100</p>
+            <input type="submit" value="Sūtīt">
+            </form>
+        </div>
     </div>
 </body>
 </html>
