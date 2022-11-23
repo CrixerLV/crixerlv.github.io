@@ -90,7 +90,7 @@ a:active { text-decoration: none; }
 
 @media screen and (max-width: 1280px){
     .middle-bar{
-        margin-top: 10vh;
+        margin-top: 3vh;
         text-align: center;
     }
     .middle-bar-right{
