@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:link { text-decoration: none; color: black; }
+
+
+a:visited { text-decoration: none; color: black; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.top-bar{
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,10%);
+    padding: 18px 0px 18px 0px;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Alexandria', sans-serif;
+}
+.top-bar-right{
+    min-width: 35%;
+    float: right;
+    position: relative;
+}
+.top-bar-right a,.top-bar a{
+    margin-left: 4vw;
+    margin-right: 4vw;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+#openedpage{
+    border: 0;
+    border-bottom: 3px solid rgba(0, 125, 255,100%);
+}
+
+@media only screen and (max-width: 290px){
+    .top-bar-right a,.top-bar a{
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+}
+/* UnderLine Hover Animation*/
+  
+.top-bar-right a:after,.top-bar a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 125, 255);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+  
+.top-bar-right a:hover:after,.top-bar a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.skills-bar{
+    text-align: center;
+    margin-top: 5vw;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Alexandria', sans-serif;
+}
+.skills-bar h1{
+    text-decoration: underline rgba(0, 125, 255,100%);
+    text-underline-offset: 0.7vw;
+}
+.skills-table{
+    margin-top: 4vw;
+    border: 1px solid black;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    font-size: 1.1em;
+    font-weight: 300;
+    font-style: normal;
+    font-family: 'Alexandria', sans-serif;
+}
+.skills-table th{
+    background-color: rgba(0, 125, 255,100%);
+    width: 15%;
+    border-bottom: 2px solid black;
+    padding: 0;
+    color: white;
+    padding: 20px;
+    border-right: 1px solid black;
+}
+.skills-table td{
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+}
+
+.skills-table tr:nth-child(even){background-color: #f2f2f2;}
+.skills-table tr:hover {background-color: #ddd;}
+
+
+footer{
+    position: absolute;
+    border-top: 1px solid rgba(0,0,0,10%);
+    width: 100%;
+    bottom: 0;
+    padding: 18px 0px 18px 0px;
+    text-align: left;
+}
+footer i{
+    font-size: 2em;
+    cursor: pointer;
+}
+footer i:hover{
+    scale: 1.1;
+}
+
+footer .social{
+    margin-left: 5vw;
+}
+
+@media only screen and (max-width: 1280px){
+    footer{
+        text-align: center;
+    }
+    .middle-bar{
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    footer{
+        bottom: -55%;
+    }
+}
