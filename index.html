@@ -21,6 +21,22 @@
         function closeinfo(){
             document.getElementById("opencontact").style.display = "none";
         }
+
+        const textarea = document.querySelector("message");
+
+        function inputlength(textarea){
+            const target = event.currentTarget;
+            const maxLength = 150
+            const currentLength = target.value.length;
+            
+            document.getElementById('counter').innerHTML = (`Characters Left: ${maxLength - currentLength}`);
+                if (maxLength - currentLength === 0){
+                    document.getElementById('counter').style.color = 'Red'
+                    alert("You have reached the maximum number of characters.");
+                }else if (maxLength - currentLength > 0){
+                    document.getElementById('counter').style.color = '';
+                }
+        };
     </script>
 
 </head>
@@ -46,12 +62,12 @@
     <div id="opencontact" class="black-popup">
         <div class="contact-popup">
             <h1>Contact me</h1>
-            <button onclick="closeinfo()" id="closebtn">X</button>
+            <button onclick="closeinfo()" id="closebtn">&#x2716;</button>
             <form>
             <input type="text" placeholder="Vārds" required><br>
             <input type="text" placeholder="Uzvārds" required><br>
-            <input id="message" type="text" placeholder="Ziņojums" required><br>
-            <p>Max words: 100</p>
+            <textarea oninput="inputlength()" maxlength="150" id="message"></textarea><br>
+            <p><span id="counter">Characters Left: 150</span></p>
             <input type="submit" value="Sūtīt">
             </form>
         </div>
