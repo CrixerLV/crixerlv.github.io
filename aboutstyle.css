@@ -284,3 +284,39 @@ a:active { text-decoration: none; }
         margin-top: 20px;
     }
 }
+
+footer{
+    position: absolute;
+    border-top: 1px solid rgba(0,0,0,10%);
+    width: 100%;
+    bottom: 0;
+    padding: 18px 0px 18px 0px;
+    text-align: left;
+}
+
+footer i{
+    font-size: 2em;
+    cursor: pointer;
+}
+footer i:hover{
+    scale: 1.1;
+}
+
+footer .social{
+    margin-left: 5vw;
+}
+
+@media only screen and (max-width: 1280px){
+    footer{
+        text-align: center;
+    }
+    .middle-bar{
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    footer{
+        bottom: -55%;
+    }
+}

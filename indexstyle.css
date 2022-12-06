@@ -274,6 +274,10 @@ footer i{
     font-size: 2em;
     cursor: pointer;
 }
+footer i:hover{
+    scale: 1.1;
+}
+
 footer .social{
     margin-left: 5vw;
 }
