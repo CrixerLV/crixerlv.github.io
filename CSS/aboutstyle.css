@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+body{
+    background-image: url("../Files/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 a:link { text-decoration: none; color: black; }
 
 
@@ -41,7 +47,7 @@ a:active { text-decoration: none; }
     border-bottom: 3px solid rgba(0, 125, 255,100%);
 }
 
-@media only screen and (max-width: 290px){
+@media screen and (max-width: 290px){
     .top-bar-right a,.top-bar a{
         margin-left: 2vw;
         margin-right: 2vw;
@@ -55,8 +61,40 @@ a:active { text-decoration: none; }
     font-style: normal;
     font-family: 'Alexandria', sans-serif;
     margin-left: 5vw;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.21em;
     position: relative;
+    animation: 1s ease-out 0s 1 slidein;
+}
+
+@keyframes slidein{
+    from{transform: translateX(-100%);}
+    to{transform: translateX(0);}
+}
+
+.middle-bar p{
+    letter-spacing: 0.4px;
+    font-size: 1em;
+    font-family: 'Alexandria', sans-serif;
+    font-weight: 300;
+    border-radius: 5px;
+    border-bottom: 5px solid rgba(0, 125, 255,80%);
+    width: 30%;
+    padding-bottom: 10px;
+    line-height: 30px;
+    background-color: white;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1280px){
+    .middle-bar p{
+        width: 100%;
+        margin-left: -3vw;
+    }
+}
+
+.middle-bar p a{
+    text-decoration: underline;
+    color: rgba(0, 125, 255,80%);
 }
 .middle-bar button{
     padding: 13px 38px 13px 38px;
@@ -88,7 +126,7 @@ a:active { text-decoration: none; }
 }
 
 
-@media only screen and (max-width: 1280px){
+@media screen and (max-width: 1280px){
     .middle-bar{
         margin-top: 10vh;
         text-align: center;
@@ -252,7 +290,7 @@ a:active { text-decoration: none; }
 }
 /* Contact Responsive*/
 
-@media only screen and (max-width: 1280px){
+@media screen and (max-width: 1280px){
     .contact-popup{
         width: 90%;
         height:  55%;
@@ -270,6 +308,7 @@ footer{
     padding: 18px 0px 18px 0px;
     text-align: left;
 }
+
 footer i{
     font-size: 2em;
     cursor: pointer;

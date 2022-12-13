@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - About</title>
+    <title>Portfolio - Home</title>
     <link rel="shortcut icon" href="FAV2.png" /> 
-    <link rel="stylesheet" href="aboutstyle.css">
+    <link rel="stylesheet" href="../CSS/indexstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap" rel="stylesheet">
@@ -22,7 +22,6 @@
             document.getElementById("opencontact").style.display = "none";
         }
 
-        
         const textarea = document.querySelector("message");
 
         function inputlength(textarea){
@@ -43,9 +42,9 @@
 </head>
 <body>
     <div class="top-bar">
-        <a href="index.html">Raivo</a>
+        <a id="openedpage">Raivo</a>
         <div class="top-bar-right">
-            <a  id="openedpage" href="about.html">About</a>
+            <a href="about.html">About</a>
             <a href="skills.html">Skills</a>
             <a href="https://github.com/CrixerLV">Projects</a>
         </div>
@@ -54,25 +53,23 @@
         <div class="middle-bar-right">
             <img src="https://scontent.frix1-1.fna.fbcdn.net/v/t1.6435-9/81742836_3071064189786329_4231316499148570624_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=YP60HC1CL30AX90oH2Z&_nc_ht=scontent.frix1-1.fna&oh=00_AfBGJ7JDv0MEtse9OI28LfaXSr-Xf1IB8L2Ob2sVij0EfQ&oe=63A3F78A">
         </div>
-        <h1>About</h1>
-        <p>Hello!
-            <br>
-            I'm an 18-year-old young guy who is passionate about programming.
-            I am a 3rd-year programming technician at the Riga State technical school, and I can say that I have learned the following programming languages ​​quite well: <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> , <a href="https://en.wikipedia.org/wiki/JavaScript">JS</a>, <a href="https://en.wikipedia.org/wiki/CSS">CSS</a>, <a href="https://en.wikipedia.org/wiki/C#">C#</a>, <a href="https://en.wikipedia.org/wiki/C++">C++ </a>, <a href="https://en.wikipedia.org/wiki/lua">LUA</a>,and a bit of <a href="https://en.wikipedia.org/wiki/php ">PHP</a> and other languages.
-            Outside of the world of programming, I really like basketball, as well as driving around in my car, I have already traveled to various places, and I can list it as my third hobby, after basketball and programming.
-        </p>
+        <h1>Hello!</h1>
+        <h2>My name is Raivo</h1>
+        <h2>And I am a</h1>
+        <h2>Junior-Web-Developer</h1>
         <button onclick="openinfo()">Contact me</button>
     </div>
     <div id="opencontact" class="black-popup">
         <div class="contact-popup">
             <h1>Contact me</h1>
             <button onclick="closeinfo()" id="closebtn">&#x2716;</button>
-            <form>
-            <input type="text" placeholder="Vārds" required><br>
-            <input type="text" placeholder="Uzvārds" required><br>
-            <textarea oninput="inputlength()" maxlength="150" id="message"></textarea><br>
+            <form method="post" action="messages.php">
+            <input name="Name" maxlength="25" type="text" placeholder="Name" required><br>
+            <input name="LastName" maxlength="25" type="text" placeholder="Last Name" required><br>
+            <input name="Email" maxlength="25" type="text" placeholder="Email" required><br>
+            <textarea name="Message" oninput="inputlength()" maxlength="150" id="message"></textarea><br>
             <p><span id="counter">Characters Left: 150</span></p>
-            <input type="submit" value="Sūtīt">
+            <input name="submit" type="submit" value="Send">
             </form>
         </div>
     </div>

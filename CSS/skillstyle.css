@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+body{
+    background-image: url("../Files/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 a:link { text-decoration: none; color: black; }
 
 
@@ -67,6 +73,11 @@ a:active { text-decoration: none; }
     transform-origin: bottom left;
 }
 
+@keyframes slidein{
+    from{transform: translateX(-100%);}
+    to{transform: translateX(0);}
+}
+
 .skills-bar{
     text-align: center;
     margin-top: 5vw;
@@ -74,6 +85,7 @@ a:active { text-decoration: none; }
     font-weight: 500;
     font-style: normal;
     font-family: 'Alexandria', sans-serif;
+    animation: 1s ease-out 0s 1 slidein;
 }
 .skills-bar h1{
     text-decoration: underline rgba(0, 125, 255,100%);
@@ -106,6 +118,7 @@ a:active { text-decoration: none; }
 }
 
 .skills-table tr:nth-child(even){background-color: #f2f2f2;}
+.skills-table tr:nth-child(odd){background-color: #9e9e9e;}
 .skills-table tr:hover {background-color: #ddd;}
 
 
